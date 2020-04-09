@@ -56,14 +56,14 @@ WX_EXPORT_METHOD(@selector(authLogin:))
                                           appKey:info[@"appKey"]
                                        appSecret:info[@"appSecret"]
                                      redirectURL:info[@"redirectURL"]];
-    [WXApi startLogByLevel:WXLogLevelDetail logBlock:^(NSString *log) {
-      NSLog(@"WeChatSDK: %@", log);
-    }];
+    // [WXApi startLogByLevel:WXLogLevelDetail logBlock:^(NSString *log) {
+    //   NSLog(@"WeChatSDK: %@", log);
+    // }];
     [WXApi registerApp:info[@"appKey"] universalLink:info[@"universalLink"]];
     //调用自检函数
-    [WXApi checkUniversalLinkReady:^(WXULCheckStep step, WXCheckULStepResult* result) {
-      NSLog(@"%@, %u, %@, %@", @(step), result.success, result.errorInfo, result.suggestion);
-    }];
+    // [WXApi checkUniversalLinkReady:^(WXULCheckStep step, WXCheckULStepResult* result) {
+    //   NSLog(@"%@, %u, %@, %@", @(step), result.success, result.errorInfo, result.suggestion);
+    // }];
     [UMSocialGlobal shareInstance].isUsingHttpsWhenShareContent = NO;
 }
 
