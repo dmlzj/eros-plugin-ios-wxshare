@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
 
   s.source_files = "Source/*.{h,m,mm}"
   s.requires_arc = true
-  s.dependency 'UMCShare/Social/ReducedWeChat', '6.9.1'
+  s.dependency 'UMCShare/Social/ReducedWeChat', '6.9.7'
   s.dependency 'WechatOpenSDK', '1.8.7'
   
 end
